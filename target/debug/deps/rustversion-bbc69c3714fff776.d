@@ -1,0 +1,20 @@
+/home/rizary/apps/target/debug/deps/librustversion-bbc69c3714fff776.so: /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/lib.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/attr.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/bound.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/constfn.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/date.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/error.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expand.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expr.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/iter.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/release.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/time.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/token.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/version.rs /home/rizary/apps/target/debug/build/rustversion-63d43dba7c6c2bd1/out/version.expr
+
+/home/rizary/apps/target/debug/deps/rustversion-bbc69c3714fff776.d: /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/lib.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/attr.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/bound.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/constfn.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/date.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/error.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expand.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expr.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/iter.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/release.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/time.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/token.rs /home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/version.rs /home/rizary/apps/target/debug/build/rustversion-63d43dba7c6c2bd1/out/version.expr
+
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/lib.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/attr.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/bound.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/constfn.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/date.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/error.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expand.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/expr.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/iter.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/release.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/time.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/token.rs:
+/home/rizary/.cargo/registry/src/github.com-1ecc6299db9ec823/rustversion-1.0.8/src/version.rs:
+/home/rizary/apps/target/debug/build/rustversion-63d43dba7c6c2bd1/out/version.expr:
+
+# env-dep:OUT_DIR=/home/rizary/apps/target/debug/build/rustversion-63d43dba7c6c2bd1/out

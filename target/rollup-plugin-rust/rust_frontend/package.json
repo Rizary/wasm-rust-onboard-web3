@@ -1,0 +1,9 @@
+{
+  "@rollup/plugin-node-resolve": "^13.3.0",
+  "@wasm-tool/rollup-plugin-rust": "^2.2.2",
+  "@web3-onboard/core": "^2.6.0",
+  "@web3-onboard/walletconnect": "^2.0.8",
+  "dotenv": "^16.0.1",
+  "ethers": "^5.6.9",
+  "wasm-pack": "^0.10.3"
+}

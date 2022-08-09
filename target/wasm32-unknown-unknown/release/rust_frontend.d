@@ -1,0 +1,1 @@
+/home/rizary/ischain/halalNFT/frontend/apps/target/wasm32-unknown-unknown/release/rust_frontend.wasm: /home/rizary/ischain/halalNFT/frontend/apps/src/app.rs /home/rizary/ischain/halalNFT/frontend/apps/src/lib.rs /home/rizary/ischain/halalNFT/frontend/apps/src/routing.rs

@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "run-p watch:tailwind watch:rollup",
+    "build": "run-p build:tailwind build:rollup",
+    "watch:tailwind": "NODE_ENV=development postcss styles/globals.css -o devhtml/css/main.css -w",
+    "build:tailwind": "NODE_ENV=production postcss styles/globals.css -o dist/css/main.css",
+    "watch:rollup": "NODE_ENV=development rollup -c rollup.dev.js --watch",
+    "build:rollup": "NODE_ENV=production rollup -c rollup.prod.js",
+    "clean": "rimraf ./devhtml/js && rimraf ./devhtml/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.12",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-clean": "^1.2.2",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.6",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.6",
+    "rollup-plugin-inject-process-env": "^1.3.1",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-polyfill-node": "^0.10.2",
+    "rollup-plugin-serve": "^1.1.0",
+    "tailwindcss": "^3.1.3"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@wasm-tool/rollup-plugin-rust": "^2.2.2",
+    "@web3-onboard/core": "^2.6.0",
+    "@web3-onboard/walletconnect": "^2.0.8",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.9",
+    "wasm-pack": "^0.10.3"
+  }
+}

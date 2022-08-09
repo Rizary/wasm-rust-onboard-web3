@@ -1,0 +1,80 @@
+[package]
+name = "rust-frontend"
+version = "0.1.0"
+categories = ["wasm"]
+authors = ["Andika Demas Riyandi <andika.riyan@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7", optional = true }
+cfg-if = "1.0.0"
+js-sys = "0.3.58"
+lazy_static = "1.4.0"
+log = "0.4.17"
+dominator = "0.5.26"
+futures = "0.3.21"
+futures-signals = "0.3.28"
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = "1.0.81"
+wasm-bindgen = { version = "0.2.81", features = [ "serde-serialize" ] }
+wasm-bindgen-futures = "0.4.31"
+wasm-logger = { version = "0.2.0", optional = true }
+serde-wasm-bindgen = "0.4.3"
+uuid = { version = "1.1.2", features = ["serde"] }
+chrono = { version = "0.4.19", features = ["wasmbind"] }
+discard = "1.0.4"
+strum = "0.24.1"
+strum_macros = "0.24.2"
+
+[dependencies.web-sys]
+version = "0.3.58"
+features = [
+    'Storage',
+    'Url',
+    'XmlHttpRequest',
+    'Request',
+    'RequestInit',
+    'RequestCredentials',
+    'Response',
+    'RequestMode',
+    'Headers',
+    'Document', 
+    'DocumentFragment',
+    'HtmlTemplateElement',
+    'Window',
+    'Storage',
+    'Location',
+    'Element',
+    'CssStyleDeclaration',
+    'DomTokenList',
+    'HtmlCollection',
+    'HtmlInputElement',
+    'HtmlSelectElement',
+    'HtmlDocument',
+    'ImageData',
+    'DomRect',
+    'KeyboardEvent',
+    'MouseEvent',
+    'HtmlFormElement',
+    'Blob',
+    'BlobPropertyBag',
+    'Worker',
+    'PointerEvent',
+]
+
+[features]
+ts_test = []
+develop = ["wasm-logger", "console_error_panic_hook" ]
+
+[profile.release]
+lto = true
+opt-level = 'z'
+codegen-units = 1
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
