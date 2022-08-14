@@ -12,11 +12,29 @@ use web_sys::Url;
 pub enum Route {
     NotFound,
     Home(HomeRoute),
+    Dashboard(DashboardRoute),
+    Docs(DocsRoute),
+    Admin(AdminRoute),
 }
 
 #[derive(Debug, Clone)]
 pub enum HomeRoute {
     Home,
+}
+
+#[derive(Debug, Clone)]
+pub enum DashboardRoute {
+    Dashboard,
+}
+
+#[derive(Debug, Clone)]
+pub enum DocsRoute {
+    Docs,
+}
+
+#[derive(Debug, Clone)]
+pub enum AdminRoute {
+    Admin,
 }
 
 impl Display for Route {
@@ -46,6 +64,9 @@ impl Route {
         let paths = paths.as_slice();
         match paths {
             [""] => Self::Home(HomeRoute::Home),
+            ["dashboard"] => Self::Dashboard(DashboardRoute::Dashboard),
+            ["docs"] => Self::Docs(DocsRoute::Docs),
+            ["admin"] => Self::Admin(AdminRoute::Admin),
             _ => Self::NotFound,
         }
     }
@@ -62,6 +83,15 @@ impl From<&Route> for String {
         match route {
             Route::Home(route) => match route {
                 HomeRoute::Home => "/".to_string(),
+            },
+            Route::Dashboard(route) => match route {
+                DashboardRoute::Dashboard => "/dashboard".to_string(),
+            },
+            Route::Docs(route) => match route {
+                DocsRoute::Docs => "/docs".to_string(),
+            },
+            Route::Admin(route) => match route {
+                AdminRoute::Admin => "/admin".to_string(),
             },
             Route::NotFound => "/404".to_string(),
         }

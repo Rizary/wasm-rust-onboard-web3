@@ -746,6 +746,9 @@ select {
 .block {
   display: block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -805,6 +808,9 @@ select {
 .border {
   border-width: 1px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -814,6 +820,20 @@ select {
 }
 .p-1 {
   padding: 0.25rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.font-medium {
+  font-weight: 500;
 }
 .uppercase {
   text-transform: uppercase;

@@ -1,14 +1,17 @@
 import Onboard from "@web3-onboard/core";
+import injectedConnectModule from "@web3-onboard/injected-wallets";
 import walletConnectModule from "@web3-onboard/walletconnect";
 
 let onboard;
 const MUMBAI_RPC_URL = `${window.process.env.POLYGON_TEST_URL}/${process.env.POLYGON_MATICVIGIL_API_KEY}`;
+const POLYGON_RPC_URL = `${window.process.env.POLYGON_MAINNET_URL}/${process.env.POLYGON_MATICVIGIL_API_KEY}`;
 const walletConnect = walletConnectModule();
+const injected = injectedConnectModule();
 
 export function _init() {
     console.log("Hello, World!!")
     onboard = Onboard({
-        wallets: [walletConnect],
+        wallets: [walletConnect, injected],
         chains: [
             {
                 id: "0x13881",
@@ -48,7 +51,8 @@ export async function _connect() {
     // const providerEthers = new ethers.providers.Web3Provider(provider);
     // const signer = providerEthers.getSigner();
     // onboard = { providerEthers, signer, accounts, chains };
-    return JSON.stringify(connectedWallet)
+    // return JSON.stringify(connectedWallet)
+    return ""
 }
 
 

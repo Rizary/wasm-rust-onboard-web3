@@ -1,31 +1,16 @@
 mod router;
 mod home;
+mod docs;
 mod common;
+mod dashboard;
 mod utils;
 
+use utils::wallet::{init, connect};
 use wasm_bindgen::prelude::*;
 use router::Router;
 
 use std::sync::Arc;
 use cfg_if::cfg_if;
-
-#[wasm_bindgen(module = "/js/wallet.js")]
-extern "C" {
-    fn _init();
-    fn _connect() -> String;
-    fn _myAddress() -> String;
-    
-}
-
-pub fn init() {
-    _init();
-}
-
-pub fn connect() -> String {
-    let wallet_connected = _connect();
-    log::info!("walletConnected: {}", wallet_connected);
-    return wallet_connected
-}
 
 #[wasm_bindgen(start)]
 pub async fn main_js() {

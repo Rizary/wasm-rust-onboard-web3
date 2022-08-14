@@ -13,13 +13,14 @@ export default {
     input: {
         index: "Cargo.toml"
     },
+    preserveEntrySignatures: true,
     output: {
         dir: "devhtml/js",
-        format: "iife",
+        format: "es",
         sourcemap: true,
         chunkFileNames: "[name].js",
         assetFileNames: "assets/[name][extname]",
-        inlineDynamicImports: true,
+        // preserveModules: true,
         // external: [ '@web3-onboard/core', "@web3-onboard/walletconnect" ],
         // globals: {
         //     'Onboard': '@web3-onboard/core',
@@ -27,36 +28,26 @@ export default {
         // }
     },
     plugins: [
+        json(),
+        
         rust({
             serverPath: "/js/",
             debug: true,
             verbose: true,
-            watchPatterns: ["./src/**", "./js/**"],
+            watchPatterns: ["./src/**", "./js/**", "./devhtml/index.html", "./*.js", "./Cargo.toml"],
             cargoArgs: ["--features", "develop"],
             watch: true,
         }),
-
-        // external({
-        //     includeDependencies: true,
-        // }),
+        
         nodeResolve({
-            preferBuiltins: 'false',
+            browser: true,
+            preferBuiltins: true,
         }),
 
         commonjs(),
         
-        nodePolyfills({ 
-            include: [
-                '*.js',
-               'node_modules/**/*.js',
-                new RegExp('node_modules/.vite/.*js')
-              ],
-              // ↓ Not sure if this line is necessary, seems to work without it
-              exclude: ['node_modules/polyfill-nodeglobal.js']
-         }),
-
-        json(),
-
+        nodePolyfills(),
+        
         serve({
             contentBase: 'devhtml',
             open: true,

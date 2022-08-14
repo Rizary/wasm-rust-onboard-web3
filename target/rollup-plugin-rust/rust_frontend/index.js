@@ -1,5 +1,4 @@
-import { set_property, add_event } from './snippets/dominator-ccb2318289f9c62e/inline0.js';
-import { _connect } from './snippets/rust-frontend-edefcc6df84c92d1/js/wallet.js';
+import { set_property, add_event, remove_event } from './snippets/dominator-ccb2318289f9c62e/inline0.js';
 import * as __wbg_star0 from './snippets/rust-frontend-edefcc6df84c92d1/js/wallet.js';
 
 let wasm;
@@ -290,13 +289,6 @@ function getImports() {
         const ret = getObject(arg0);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbg_connect_2b29cdc323d6cfd5 = function(arg0) {
-        const ret = _connect();
-        const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-        const len0 = WASM_VECTOR_LEN;
-        getInt32Memory0()[arg0 / 4 + 1] = len0;
-        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-    };
     imports.wbg.__wbg_error_09919627ac0992f5 = function(arg0, arg1) {
         var v0 = getCachedStringFromWasm0(arg0, arg1);
     if (arg0 !== 0) { wasm.__wbindgen_free(arg0, arg1); }
@@ -320,6 +312,10 @@ imports.wbg.__wbg_setproperty_8776ee21ae01987a = function(arg0, arg1, arg2, arg3
 imports.wbg.__wbg_addevent_6779f5b4c038343e = function(arg0, arg1, arg2, arg3, arg4, arg5) {
     var v0 = getCachedStringFromWasm0(arg1, arg2);
     add_event(getObject(arg0), v0, arg3 !== 0, arg4 !== 0, getObject(arg5));
+};
+imports.wbg.__wbg_removeevent_51a4d7ca87364aa3 = function(arg0, arg1, arg2, arg3, arg4) {
+    var v0 = getCachedStringFromWasm0(arg1, arg2);
+    remove_event(getObject(arg0), v0, arg3 !== 0, getObject(arg4));
 };
 imports.wbg.__wbindgen_cb_drop = function(arg0) {
     const obj = takeObject(arg0).original;
@@ -381,6 +377,14 @@ imports.wbg.__wbg_new_f508102bcfd6feb6 = function() { return handleError(functio
     const ret = new URL(v0);
     return addHeapObject(ret);
 }, arguments) };
+imports.wbg.__wbg_add_2c230dc2850cac52 = function() { return handleError(function (arg0, arg1, arg2) {
+    var v0 = getCachedStringFromWasm0(arg1, arg2);
+    getObject(arg0).add(v0);
+}, arguments) };
+imports.wbg.__wbg_classList_69b08a61aad2445b = function(arg0) {
+    const ret = getObject(arg0).classList;
+    return addHeapObject(ret);
+};
 imports.wbg.__wbg_instanceof_HtmlElement_d2b7afdac18ee070 = function(arg0) {
     const ret = getObject(arg0) instanceof HTMLElement;
     return ret;
@@ -465,12 +469,12 @@ imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
 imports.wbg.__wbindgen_throw = function(arg0, arg1) {
     throw new Error(getStringFromWasm0(arg0, arg1));
 };
-imports.wbg.__wbindgen_closure_wrapper1077 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 41, __wbg_adapter_16);
+imports.wbg.__wbindgen_closure_wrapper1457 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 59, __wbg_adapter_16);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper1529 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 61, __wbg_adapter_19);
+imports.wbg.__wbindgen_closure_wrapper1909 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 79, __wbg_adapter_19);
     return addHeapObject(ret);
 };
 imports['./snippets/rust-frontend-edefcc6df84c92d1/js/wallet.js'] = __wbg_star0;

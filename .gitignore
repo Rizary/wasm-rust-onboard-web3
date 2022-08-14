@@ -1,0 +1,6 @@
+frontend/apps/devhtml/js
+frontend/apps/devhtml/css
+**/node_modules/
+**/target
+**/dist
+**/.env
